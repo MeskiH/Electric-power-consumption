@@ -15,7 +15,7 @@ df_eletric$Time < as.Date(df_eletric$Time, tryFormats = "%H:%M:%S")
 
 df_filtered <- df_eletric[(df_eletric$Date >= "2007-02-01" & df_eletric$Date <= "2007-02-02"),]
 
-##### Plot 2  ##### 
+
 
 #English TimeZone
 Sys.setlocale("LC_TIME", "English")
@@ -24,15 +24,14 @@ Sys.setlocale("LC_TIME", "English")
 ## globalActivePower <- as.numeric(df_filtered$Global_active_power)
 
 
-## Create plot3
- with(t, {
+## Create Plot 3
+with(t, {
   plot(Sub_metering_1~dateTime, type="l",
-     ylab="Global Active Power (kilowatts)", xlab="")
- lines(Sub_metering_2~dateTime,col='Red')
+       ylab="Global Active Power (kilowatts)", xlab="")
+  lines(Sub_metering_2~dateTime,col='Red')
   lines(Sub_metering_3~dateTime,col='Blue')
 })
 legend("topright", col=c("black", "red", "blue"), lwd=c(1,1,1), 
        c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
-
 
 
