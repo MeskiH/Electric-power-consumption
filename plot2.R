@@ -1,13 +1,3 @@
-
-# Create the data frame
-df <- data.frame(DateTime = c("2023-08-04 12:00:00", "2023-08-04 13:00:00", "2023-08-04 14:00:00"))
-
-# Set the names of the `DateTime` column
-df <- setNames(df, c("DateTime"))
-
-# Print the data frame
-print(df)
-
 t <- read.table("household_power_consumption.txt", header=TRUE, sep=";", na.strings = "?", colClasses = c('character','character','numeric','numeric','numeric','numeric','numeric','numeric','numeric'))
 
 ## Format date to Type Date
