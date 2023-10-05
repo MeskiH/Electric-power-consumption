@@ -30,7 +30,7 @@ t <- cbind(dateTime, t)
 t$dateTime <- as.POSIXct(dateTime)
 
 
-## Create the histograms
+## Create the histogra
 
 # Plot 4
 
